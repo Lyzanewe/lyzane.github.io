@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+body {
+  font-family: 'Righteous', Helvetica, sans-serif;
+  background: linear-gradient(45deg, #6899f3, #97b3e7, #ce97e7, #db89d0, #faabe0,#fd73cf);
+  background-size: 400% 400%;
+  animation: gradient 15s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+nav li {
+  float: center;
+  width: 170px;
+  height: 35px;
+  background-color: rgb(198, 74, 202);
+  text-align: center;
+  line-height: 35px;
+  list-style: none;
+  position: relative;
+  vertical-align: top;
+  justify-content: center;
+  font-family: "Arial";
+  font-weight: bold;
+  box-shadow: 6px 6px 12px 0px #0000003a;
+}
+
+nav li a,
+a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav li.menu {
+  background-color: rgb(161, 28, 161);
+  color: rgb(179, 245, 188);
+}
+
+nav li :hover {
+  background-color: rgb(231, 155, 13);
+  font-size: 17px;
+}
+
+.Kyl {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  border-radius: 100%;
+  border-style: solid;
+  padding: 4px;
+  border-width: 1px;
+  border-color: rgb(220, 225, 225);
+  background-color: white;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.205);
+  transition: all 200ms ease-in-out;
+  animation: appear ease-out 1s;
+}
+
+/* Animation d'apparition */
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
+.Kyl:hover {
+  width: 32%;
+  box-shadow: 0 0 1em rgb(255, 255, 255), 0 0 0.2em blue;
+  transition: all 200ms ease-in-out;
+}
+
+h1,
+h2 {
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.205);
+  color: rgb(12, 128, 70);
+}
+
+p {
+  text-align: center;
+  font-family: Arial;
+}
+
+.Cnt {
+  display: inline-flex;
+  justify-content: center;
+  font-family: Arial;
+  animation: appear ease-out 1s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
+.DiscLogo,
+.GMLogo,
+.PhoneLogo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  height: 20%;
+  transition: width 200ms;
+}
+
+/* Cacher les informations tant que les icones ne sont pas hover */
+.DiscHide,
+.GMHide,
+.PhoneHide {
+  display: none;
+  font-weight: bold;
+  text-align: left;
+  top: 0px;
+}
+
+.DiscLogo:hover,
+.GMLogo:hover,
+.PhoneLogo:hover {
+  width: 22%;
+  height: 22%;
+  transition: width 200ms;
+}
+
+/* Révéler les informations une fois les icones hover */
+.DiscLogo:hover+.DiscHide {
+  display: block;
+  float: top;
+  position: absolute;
+  left: 330px;
+  top: 30px;
+  background-color: #92AD40;
+  padding: 5px;
+  color: #FFFFFF;
+  font-weight: bold;
+  box-shadow: 0 0 1em rgb(255, 255, 255), 0 0 0.4em rgb(0, 255, 98);
+  animation: fadeIn 300ms ease-in normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+  0% {
+    transform: matrix(1.04, -0.01, -1.33, 0.66, 0, -40);
+  }
+}
+
+.GMLogo:hover+.GMHide {
+  display: block;
+  float: top;
+  position: absolute;
+  left: 590px;
+  top: 100px;
+  background-color: #92AD40;
+  padding: 5px;
+  color: #FFFFFF;
+  font-weight: bold;
+  box-shadow: 0 0 1em rgb(255, 255, 255), 0 0 0.4em rgb(0, 255, 98);
+  animation: fadeIn 500ms ease-in-out normal;
+}
+
+.PhoneLogo:hover+.PhoneHide {
+  display: block;
+  float: top;
+  position: absolute;
+  left: 890px;
+  top: 30px;
+  background-color: #92AD40;
+  padding: 5px;
+  color: #FFFFFF;
+  font-weight: bold;
+  box-shadow: 0 0 1em rgb(255, 255, 255), 0 0 0.4em rgb(0, 255, 98);
+  animation: fadeIn 500ms ease-in-out normal;
+}
+
+a,
+footer {
+  text-align: center;
+  font-weight: bold;
+}
+
+.DIVMenu {
+  position: fixed;
+  top: 30px;
+}
+
+footer {
+  font-family: Arial;
+}
+
+.exp {
+  font-size: 20px;
+}
